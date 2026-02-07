@@ -1,3 +1,5 @@
+import {Likedislike} from './Likedislike';
+
 export function Movies () {
   return (
     <div className="movies-container">
@@ -20,6 +22,12 @@ export function Movies () {
         <p>
           A massive war drama sequel set during the 1971 Indo-Pak war. Sunny Deol returns as Major Kuldip Singh Chandpuri to lead a new battalion in a high-stakes battle for sovereignty, featuring intense tank warfare and patriotic sacrifice.
         </p>
+
+      </div>
+      <div className="like-edit-delete-container">
+        <div className="like-dislike-full-container">
+          <Likedislike />
+        </div>
 
       </div>
 
