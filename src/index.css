@@ -1,0 +1,28 @@
+.movies-container{
+    width: 19rem;
+    /* border: 1px solid gray; */
+}
+
+.movie-poster img{
+    width: 19rem;
+    border-radius: 2rem;
+}
+
+.movie-name-rating{
+    display: flex;
+    justify-content: space-between;
+}
+
+.like-dislike-container{
+    display: flex;
+    color: rgb(0, 0, 0);
+    gap: 10px;
+    button{
+        background-color: rgb(255, 255, 255);
+        border: none;
+    }
+    .badge{
+        padding: 4px;
+    }
+
+}

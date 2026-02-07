@@ -1,13 +1,19 @@
 import { BrowserRouter, Routes, Route } from "react-router";
 import { NavLink, Link } from "react-router";
+import { Movies } from "./Movies";
+import { useState } from "react";
+import ThumbUpOutlinedIcon from '@mui/icons-material/ThumbUpOutlined';
+import ThumbDownOffAltOutlinedIcon from '@mui/icons-material/ThumbDownOffAltOutlined';
+import Badge, { badgeClasses } from '@mui/material/Badge';
+import { styled } from '@mui/material/styles';
 
 function App() {
 
 
   return (
     <>
-    <Movies/>
-    
+    {/* <Movies/> */}
+    <Likedislike/>
     {/* <nav>
         <Link to="/about">About</Link>
     </nav> */}
@@ -18,24 +24,32 @@ function App() {
   )
 }
 
-function Movies(){
+function Likedislike(){
+  const CartBadge = styled(Badge)`
+  & .${badgeClasses.badge} {
+    top: -12px;
+    right: -6px;
+  }
+`;
+
+  const [like,setLike] = useState(0)
+  const [dislike,setDislike] = useState(0)
+
   return(
-    <div className="movies-container">
-      <div className="movie-poster">
-        <img src="https://assets-in.bmscdn.com/discovery-catalog/events/et00401449-yvzgkbpdca-portrait.jpg" alt="" />
+    <>
+    <div className="like-dislike-container">
+      <div className="like-container">
+        <button onClick={()=>setLike(like+1)}><ThumbUpOutlinedIcon/><CartBadge className="badge" badgeContent={like} color="primary" overlap="circular" /></button>
       </div>
-      <div className="movie-name-rating">
-        <div className="movie-name">
-          <h3>Border 2</h3>
-          <h3>⭐7.5</h3>
-        </div>
+      <div className="dislike-container">
+        <button onClick={()=>setDislike(dislike+1)}><ThumbDownOffAltOutlinedIcon/><CartBadge className="badge" badgeContent={dislike} color="error" overlap="circular" /></button>
       </div>
-      <div className="movie-summary">
-        <p>A massive war drama sequel set during the 1971 Indo-Pak war. Sunny Deol returns as Major Kuldip Singh Chandpuri to lead a new battalion in a high-stakes battle for sovereignty, featuring intense tank warfare and patriotic sacrifice.</p>
-
-      </div>
-
     </div>
+    <div className="review">
+      {like ===0 && dislike === 0 ? "" : like-dislike >=10 ? "🎊Blockbuster🎊":"😭Flop😭"}
+    </div>
+    </>
+    
   )
 }
 
