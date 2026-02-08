@@ -68,3 +68,14 @@
     justify-content: space-between;   
     
 }
+
+
+.add-movie-container{
+    display: flex;
+    margin-bottom: 8px;
+    gap: 5px;
+    Button{
+        
+        height: 55px;
+    }
+}

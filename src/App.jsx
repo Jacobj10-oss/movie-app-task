@@ -5,12 +5,15 @@ import { Likedislike } from "./Likedislike";
 import { Moviesdata } from "./Moviesdata";
 
 
+
 function App() {
 
 
   return (
     <>
     <Moviesdata/>
+  
+    
     {/* <nav>
         <Link to="/movies">Movies</Link>
     </nav>
@@ -20,6 +23,5 @@ function App() {
     </>
   )
 }
-
 
 export default App
