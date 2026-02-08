@@ -17,7 +17,7 @@ export function Moviesdata () {
     <section className="movisdata-list-container">
       <div className="moviedata-list-container">
 
-      {movies.map (({name, poster, rating, summary,id}) => (
+      {movies.map (({name, poster, rating, summary}) => (
         <Movies
           // key={id}
           // id={id}

@@ -1,6 +1,7 @@
 .movies-container{
     width: 19rem;
     /* border: 1px solid gray; */
+    font-family: sans-serif;
 }
 
 .movie-poster img{
@@ -15,6 +16,27 @@
 .movie-name-rating{
     display: flex;
     justify-content: space-between;
+    place-items: center;
+}
+
+.movie-summary-button > Button{
+    border-color: gray ;
+    border-radius: 3rem;
+    height: 1.5rem;
+    font-weight: 800;
+    color: rgb(86, 86, 86);
+    background-color: white;
+    
+
+}
+
+.movie-summary-button > Button:hover{
+    background-color: black;
+    color: rgb(255, 255, 255);
+    transform: scale(1.1);
+    transition: 0.5s;
+    
+
 }
 
 .like-dislike-container{
@@ -40,8 +62,6 @@
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    
+    justify-content: space-between;   
     
 }

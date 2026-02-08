@@ -2,7 +2,6 @@ import { BrowserRouter, Routes, Route } from "react-router";
 import { NavLink, Link } from "react-router";
 import { Movies } from "./Movies";
 import { Likedislike } from "./Likedislike";
-import { useEffect, useState } from "react";
 import { Moviesdata } from "./Moviesdata";
 
 
