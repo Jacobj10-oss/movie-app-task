@@ -3,7 +3,7 @@ import {Likedislike} from './Likedislike';
 
 import Button from '@mui/material/Button';
 
-export function Movies({name, poster, rating, summary}) {
+export function Movies({name, poster, rating, summary, deletemovie}) {
   const [show, setShow] = useState (false);
 
   return (
@@ -42,6 +42,9 @@ export function Movies({name, poster, rating, summary}) {
       <div className="like-edit-delete-container">
         <div className="like-dislike-full-container">
           <Likedislike />
+        </div>
+        <div>
+          {deletemovie}
         </div>
 
       </div>
