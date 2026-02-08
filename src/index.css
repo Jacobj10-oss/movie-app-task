@@ -5,7 +5,11 @@
 
 .movie-poster img{
     width: 19rem;
+    height: 30rem;
     border-radius: 2rem;
+    justify-content: center;
+    object-fit: cover;
+
 }
 
 .movie-name-rating{
@@ -31,3 +35,13 @@
     padding-top: 0.5rem;
 }
 
+
+.moviedata-list-container{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+}
