@@ -5,6 +5,9 @@ import { Likedislike } from "./Likedislike";
 import { Moviesdata } from "./Moviesdata";
 import { AddMovie } from "./Addmovie";
 import { Home } from "./Home";
+import HomeIcon from '@mui/icons-material/Home';
+import MovieIcon from '@mui/icons-material/Movie';
+import MovieEditIcon from '@mui/icons-material/MovieEdit';
 
 
 
@@ -20,10 +23,9 @@ function App() {
 
     
       <ul>
-        <li><Link to="/home">Home</Link></li>
-        
-        <li><Link to="/movies">Movies</Link></li>
-        <li><Link to="/movies/add">AddMovie</Link></li>
+        <li><Link to="/home"><HomeIcon/> Home</Link></li>
+        <li><Link to="/movies"><MovieIcon/>Movies</Link></li>
+        <li><Link to="/movies/add"><MovieEditIcon/>AddMovie</Link></li>
       </ul>
 
     </div>
