@@ -1,9 +1,18 @@
 import {useState} from 'react';
 import {Likedislike} from './Likedislike';
-
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import Button from '@mui/material/Button';
+import IconButton from '@mui/material/IconButton';
 
-export function Movies({name, poster, rating, summary, deletemovie}) {
+export function Movies({
+  name,
+  poster,
+  rating,
+  summary,
+  deletemovie,
+  editmovie,
+}) {
   const [show, setShow] = useState (false);
 
   return (
@@ -15,6 +24,15 @@ export function Movies({name, poster, rating, summary, deletemovie}) {
         <div className="movie-name">
           <h3>{name}</h3>
         </div>
+        <div className="movie-summary-button">
+          <IconButton aria-label="toggle" onClick={() => setShow (!show)}>
+            {show
+              ? <ExpandMoreIcon color="primary" />
+              : <ExpandLessIcon color="primary" />}
+
+          </IconButton>
+
+        </div>
 
         <div className="movie-rating">
           <h3>
@@ -24,16 +42,12 @@ export function Movies({name, poster, rating, summary, deletemovie}) {
 
       </div>
 
-      <div className="movie-summary-button">
-        <Button variant="outlined" onClick={() => setShow (!show)}>
-          Summary
-        </Button>
-      </div>
-
       {show
         ? <div className="movie-summary">
             <p>
+
               {summary}
+
             </p>
 
           </div>
@@ -42,6 +56,10 @@ export function Movies({name, poster, rating, summary, deletemovie}) {
       <div className="like-edit-delete-container">
         <div className="like-dislike-full-container">
           <Likedislike />
+        </div>
+        <div>
+          {editmovie}
+
         </div>
         <div>
           {deletemovie}

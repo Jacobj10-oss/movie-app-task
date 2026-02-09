@@ -15,7 +15,7 @@
 
 .movie-name-rating{
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     place-items: center;
 }
 
@@ -30,14 +30,6 @@
 
 }
 
-.movie-summary-button > Button:hover{
-    background-color: black;
-    color: rgb(255, 255, 255);
-    transform: scale(1.1);
-    transition: 0.5s;
-    
-
-}
 
 .like-dislike-container{
     display: flex;
@@ -72,10 +64,9 @@
 
 .add-movie-container{
     display: flex;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     gap: 5px;
     Button{
-        
         height: 55px;
     }
 }
