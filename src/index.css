@@ -130,3 +130,10 @@ body{
 .add-more-movies-button{
     margin-top: 20PX;
 }
+
+.form-input{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 20rem;
+}
