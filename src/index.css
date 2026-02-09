@@ -1,3 +1,38 @@
+body{
+    margin: 0px;
+    
+}
+
+.nav-bar{
+    background-color: rgb(92, 92, 255);
+    height: 45px;
+}
+
+.nav-bar ul{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    padding-top: 1rem;
+    gap: 2rem;
+    margin-top: 0px;
+    li{
+        list-style-type: none;
+        a{
+            text-decoration: none;
+            font-family: sans-serif;
+            color: rgb(255, 255, 255);
+        }
+    }
+}
+
+.homepage{
+    font-family: sans-serif;
+    color: rgb(243, 139, 21);
+    padding-left: 7px;
+    font-style: italic;
+}
+
+
 .movies-container{
     width: 19rem;
     /* border: 1px solid gray; */
@@ -30,6 +65,9 @@
 
 }
 
+.edit-delete{
+    display: flex;
+}
 
 .like-dislike-container{
     display: flex;
@@ -69,4 +107,13 @@
     Button{
         height: 55px;
     }
+}
+
+.movies-container .edit-delete{
+    opacity: 0;
+}
+
+.movies-container:hover .edit-delete{
+    opacity: 1;
+    transition: 0.5s;
 }

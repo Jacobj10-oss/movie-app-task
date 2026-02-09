@@ -57,11 +57,8 @@ export function Movies({
         <div className="like-dislike-full-container">
           <Likedislike />
         </div>
-        <div>
+        <div className="edit-delete">
           {editmovie}
-
-        </div>
-        <div>
           {deletemovie}
         </div>
 
