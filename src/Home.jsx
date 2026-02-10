@@ -1,7 +1,7 @@
 export function Home () {
   return (
     <div className="homepage">
-      <h2>Welcome to Jacob universe</h2>
+      <h2>Web cinema</h2>
 
     </div>
   );

@@ -2,13 +2,12 @@ import {Password} from '@mui/icons-material';
 import {useFormik} from 'formik';
 import {object, string} from 'yup';
 
-
 let loginValidationSchema = object ({
   username: string ().required ('username is must').min (7),
-  password: string ().required (),
+  password: string ().required ('password is must').min (8),
 });
 
-export function BasicForm () {
+export function BasicForm () {  
   const formik = useFormik ({
     initialValues: {
       username: 'Ceol',
